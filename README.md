@@ -3,8 +3,8 @@ EduTaskHub is an open-source educational platform designed to simplify the proce
 
 ## Features
 
-- **Homework Distribution:**
-  - Teachers can effortlessly create and distribute homework assignments to students.
+- **Coursework Distribution:**
+  - Teachers can effortlessly create and distribute coursework assignments to students.
   - Assignments can cover various subjects and include detailed instructions.
 
 - **Efficient Marking:**
@@ -18,7 +18,7 @@ EduTaskHub is an open-source educational platform designed to simplify the proce
 - **Progress Tracking:**
   - Track student progress and completion status for each homework assignment.
   - Generate insights into common challenges faced by students.
-
+  
 ## Getting Started
 
 1. **Clone the Repository:**
