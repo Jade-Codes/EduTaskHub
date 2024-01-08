@@ -25,8 +25,7 @@ jobs:
         password: ${{ secrets.AZUREAPPSERVICE_CONTAINERPASSWORD_1D551F71984D451992AFB0CF7D0E7970 }}
 
     - run: |
-        cd EduTaskHub.FrontEnd
-        docker build . -t ghcr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_16D9F3569CE74DCA834313D891D30F0C }}/edutaskhub:${{ github.sha }}
+        docker build ./EduTaskHub.FrontEnd -t ghcr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_16D9F3569CE74DCA834313D891D30F0C }}/edutaskhub:${{ github.sha }}
         docker push ghcr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_16D9F3569CE74DCA834313D891D30F0C }}/edutaskhub:${{ github.sha }}
 
     - uses: azure/webapps-deploy@v2
