@@ -27,6 +27,7 @@ jobs:
       with:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         template: .infra/create-rg.bicep
+        scope: subscription
 
       # Deploy Bicep file
     - name: deploy
