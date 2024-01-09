@@ -28,6 +28,7 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         template: .infra/create-rg.bicep
         scope: subscription
+        region: eastus
 
       # Deploy Bicep file
     - name: deploy
