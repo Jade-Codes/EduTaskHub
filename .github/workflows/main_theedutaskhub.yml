@@ -16,6 +16,20 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Setup .NET 8.x
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.x'
+    
+    - name: Install dependencies
+      run: dotnet restore
+      
+    - name: Build application
+      run: dotnet build
+      
+    - name: Test application
+      run: dotnet test
+
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
 
@@ -31,7 +45,7 @@ jobs:
       with:
         push: true
         tags: ghcr.io/${{ secrets.AzureAppService_ContainerUsername_8e5e4ed259fd49358eee1657faad80a9 }}/edutaskhub:${{ github.sha }}
-        file: ./Dockerfile
+        file: ./EduTaskHub.Frontend/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
