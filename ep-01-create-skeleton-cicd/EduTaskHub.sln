@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduTaskHub.Frontend", "EduTaskHub.Frontend\EduTaskHub.Frontend.csproj", "{8325AA3F-AE88-4F60-9993-53343CC3CF9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduTaskHub.Frontend.UnitTests", "EduTaskHub.Frontend.UnitTests\EduTaskHub.Frontend.UnitTests.csproj", "{ABDCA8BE-5669-4BC0-B804-788B3D8C0E56}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8325AA3F-AE88-4F60-9993-53343CC3CF9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8325AA3F-AE88-4F60-9993-53343CC3CF9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8325AA3F-AE88-4F60-9993-53343CC3CF9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8325AA3F-AE88-4F60-9993-53343CC3CF9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABDCA8BE-5669-4BC0-B804-788B3D8C0E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABDCA8BE-5669-4BC0-B804-788B3D8C0E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABDCA8BE-5669-4BC0-B804-788B3D8C0E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABDCA8BE-5669-4BC0-B804-788B3D8C0E56}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8489FA27-F7CF-417F-B1E8-1CA0D1F933BB}
+	EndGlobalSection
+EndGlobal
