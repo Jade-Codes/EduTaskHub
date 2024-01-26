@@ -1,0 +1,38 @@
+# Docs for the Azure Web Apps Deploy action: https://go.microsoft.com/fwlink/?linkid=2134798
+# More GitHub Actions for Azure: https://go.microsoft.com/fwlink/?linkid=2135048
+
+name: Azure App Service - wapp-theedutaskhub(Production), Build and deploy container app
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # checkout the repo
+    - name: 'Checkout Github Action'
+      uses: actions/checkout@master
+
+
+    - uses: azure/docker-login@v1
+      with:
+        login-server: ghcr.io/
+        username: ${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_797BAFF18B784702BBEC5DBB77D36597 }}
+        password: ${{ secrets.AZUREAPPSERVICE_CONTAINERPASSWORD_77CAB1B0C1C14CD99457CEAF7E843E39 }}
+
+    - run: |
+        cd EduTaskHub.Frontend
+        docker build . -t ghcr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_797BAFF18B784702BBEC5DBB77D36597 }}/edutaskhub:${{ github.sha }}
+        docker push ghcr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_797BAFF18B784702BBEC5DBB77D36597 }}/edutaskhub:${{ github.sha }}
+
+    - uses: azure/webapps-deploy@v2
+      with:
+        app-name: wapp-theedutaskhub
+        slot-name: Production
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_282D377211764E4684ECF01021EAAF92 }}
+        images: ghcr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_797BAFF18B784702BBEC5DBB77D36597 }}/edutaskhub:${{ github.sha }}
+
