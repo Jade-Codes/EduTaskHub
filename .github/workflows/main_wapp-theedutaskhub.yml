@@ -35,7 +35,7 @@ jobs:
 
     - name: Run docker build and push
       run: |
-        docker build . -f /EduTaskHub.Frontend/Dockerfile -t ghcr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_797BAFF18B784702BBEC5DBB77D36597 }}/edutaskhub:${{ github.sha }}
+        docker build . -f ./EduTaskHub.Frontend/Dockerfile -t ghcr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_797BAFF18B784702BBEC5DBB77D36597 }}/edutaskhub:${{ github.sha }}
         docker push ghcr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_797BAFF18B784702BBEC5DBB77D36597 }}/edutaskhub:${{ github.sha }}
 
     - uses: azure/webapps-deploy@v2
