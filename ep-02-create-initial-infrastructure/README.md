@@ -36,6 +36,10 @@ EduTaskHub is an open-source educational platform designed to simplify the proce
   dotnet run
 ```
 
-## Episode 1: Building a Skeleton CI/CD Pipeline with Blazor, GitHub Actions, and Azure
+### Episode 1: Building a Skeleton CI/CD Pipeline with Blazor, GitHub Actions, and Azure
 - YouTube Video: https://www.youtube.com/watch?v=skwpF8qCe7w&t=4s
 - Blog Post: https://jadecodes.substack.com/p/building-a-skeleton-ci-cd-pipeline-with-blazor-github-actions-and-azure
+
+### Episode 2: Using Bicep for automating your Azure App Service and GitHub Actions workflow
+- YouTube Video: https://www.youtube.com/watch?v=OPuChWI64Fo
+- Blog Post: https://jadecodes.substack.com/p/jade-codescouk
